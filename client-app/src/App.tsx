@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 import { resolveModuleName } from "typescript";
-import {Header, List} from 'semantic-ui-react'
+import { Header, List } from "semantic-ui-react";
 
 function App() {
   const [activities, setActivities] = useState([]);
@@ -17,11 +17,11 @@ function App() {
 
   return (
     <div>
-      <Header as ='h2' icon='users' content='My New Project'/>
+      <Header as="h2" icon="users" content="My New Project" />
       <List>
-      {activities.map((activity:any) => (
-            <List.Item key={activity.id}>{activity.title}</List.Item>
-          ))}
+        {activities.map((activity: any) => (
+          <List.Item key={activity.id}>{activity.title}</List.Item>
+        ))}
       </List>
     </div>
   );
